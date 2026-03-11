@@ -12,6 +12,7 @@ done &
 while true; do
   curl -s https://scornful-billye-aoko-64c2e29c.koyeb.app/ > /dev/null
   curl -s https://komari-agent-latest-kts2.onrender.com/ > /dev/null
+  curl -s https://huggingface.co/spaces/MAOSE/komari-agent/ > /dev/null
   sleep 600
 done &
 
