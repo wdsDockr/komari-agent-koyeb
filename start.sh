@@ -1,4 +1,5 @@
 #!/bin/sh
+/app/komari-agent --help
 mkdir -p /tmp/www
 echo "OK" > /tmp/www/index.html
 
