@@ -22,3 +22,11 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/komari-agent-koyeb:latest
+
+      - name: Trigger Render redeploy
+        run: curl -s -X POST "https://api.render.com/deploy/srv-d6oqc8h4tr6s738t5sp0?key=LilI6M2vNLk"
+
+      - name: Trigger Koyeb redeploy
+        run: |
+          curl -s -X POST "https://app.koyeb.com/v1/services/b2427fd2-f427-4094-a11d-1b374c0ddd75/redeploy" \
+            -H "Authorization: Bearer ${{ secrets.KOYEB_TOKEN }}"
